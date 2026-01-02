@@ -1,0 +1,71 @@
+:root {
+    /* Colors - iOS 26 Inspired HSL Palette */
+    --aura-bg: 240 10% 4%;
+    --aura-surface: 240 10% 8%;
+    --aura-accent: 230 100% 67%;
+    --aura-accent-low: 230 100% 67% / 0.1;
+    --aura-text-primary: 0 0% 100%;
+    --aura-text-secondary: 0 0% 100% / 0.6;
+    --aura-glass: 0 0% 100% / 0.05;
+    --aura-glass-border: 0 0% 100% / 0.1;
+
+    /* Spacing & Radii */
+    --aura-radius-sm: 8px;
+    --aura-radius-md: 16px;
+    --aura-radius-lg: 24px;
+    --aura-radius-full: 9999px;
+
+    /* Depth */
+    --aura-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    --aura-blur: blur(40px);
+}
+
+.glass {
+    background: hsla(0, 0%, 100%, 0.03);
+    backdrop-filter: var(--aura-blur);
+    -webkit-backdrop-filter: var(--aura-blur);
+    border: 1px solid var(--aura-glass-border);
+}
+
+.glass-dark {
+    background: hsla(240, 10%, 4%, 0.7);
+    backdrop-filter: var(--aura-blur);
+    -webkit-backdrop-filter: var(--aura-blur);
+    border: 1px solid var(--aura-glass-border);
+}
+
+.aura-card {
+    background: var(--aura-glass);
+    border-radius: var(--aura-radius-md);
+    border: 1px solid var(--aura-glass-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aura-card:hover {
+    background: hsla(0, 0%, 100%, 0.08);
+    transform: translateY(-2px);
+    box-shadow: var(--aura-shadow);
+}
+
+.ios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 2px;
+    /* iOS Photos style tight grid */
+}
+
+@media (min-width: 1024px) {
+    .ios-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        /* Desktop macOS style relaxed grid */
+    }
+}
+
+.titlebar-drag {
+    -webkit-app-region: drag;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag;
+}

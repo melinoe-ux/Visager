@@ -1,0 +1,22 @@
+# Large Folders
+venv/
+venv312/
+frontend/node_modules/
+
+# Build Outputs
+frontend/dist/
+frontend/out/
+backend/dist/
+backend/build/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Private User Data
+OrganizedPhotos/
+
+# OS/System
+.DS_Store
+Thumbs.db
